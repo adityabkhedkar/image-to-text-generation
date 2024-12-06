@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="myChart"></canvas>
+
+  <script>
+  // Retrieve performance entries
+  const entries = performance.getEntriesByType('frame');
+
+  // Prepare data for the chart
+  const labels = entries.map((entry, index) => `Frame ${index}`);
+  const cpuDurations = entries.map((entry) => entry.duration);
+
+  // Create the chart
+  new Chart(document.getElementById('myChart'), {
+    // Chart configuration
+  });
+  </script>
+</body>
+</html>
