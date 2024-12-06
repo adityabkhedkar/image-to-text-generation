@@ -111,7 +111,7 @@
 </script>
 
 <div class="container">
-	<h1>Floor is Llava</h1>
+	<h1>Image to Text Generation</h1>
 	<div
 		class="upload-area {isDragging ? 'dragging' : ''}"
 		role="button"
@@ -163,7 +163,7 @@
 		</p>
 		<p>
 			👀 the <a
-				href="https://github.com/craigsdennis/floor-is-llava-workers-ai"
+				href="https://github.com/adityabkhedkar/image-to-text-generation"
 				target="_blank">Workers AI code</a
 			>
 		</p>
