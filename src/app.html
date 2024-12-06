@@ -21,6 +21,43 @@
 		      });
 		    });
 		</script>
+
+		<script>
+		  // Create a PerformanceObserver to track frame rendering
+		  const observer = new PerformanceObserver((list) => {
+		    list.getEntries().forEach((entry) => {
+		      if (entry.entryType === 'frame') {
+		        console.log(`Frame rendering time: ${entry.duration.toFixed(2)} ms`);
+		      }
+		    });
+		  });
+		
+		  // Start observing frame entries
+		  observer.observe({ entryTypes: ['frame'] });
+		  </script>
+
+		<script>
+		  // Function to measure CPU usage
+		  function measureCPUUsage() {
+		    // Start measuring CPU usage
+		    const startTime = performance.now();
+		
+		    // Execute some CPU-intensive task
+		    for (let i = 0; i < 1000000; i++) {
+		      // Do some calculations
+		    }
+		
+		    // Calculate the elapsed time
+		    const endTime = performance.now();
+		    const cpuDuration = endTime - startTime;
+		
+		    console.log(`CPU usage duration: ${cpuDuration.toFixed(2)} ms`);
+		  }
+		
+		  // Call the CPU usage measurement function
+		  measureCPUUsage();
+		  </script>
+		
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
